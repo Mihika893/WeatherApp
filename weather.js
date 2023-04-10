@@ -1,17 +1,20 @@
-//displaying random background images from an array of images
-// function changeBackground() {
-//     var images = [
-//       "img/image1.jpg",
-//       "img/image2.jpg",
-//       "img/image3.jpg",
-//       "img/image4.jpg",
-//       "img/image5.jpg"
-//     ];
-//     var randomNumber = Math.floor(Math.random() * images.length);
-//     document.body.style.backgroundImage = "url('" + images[randomNumber] + "')";
-//   }
+// displaying random background images from an array of images
+function changeBackground() {
+    var images = [
+      "img/image1.jpg",
+      "img/image2.jpg",
+      "img/image3.jpg",
+      "img/image4.jpg",
+      "img/image5.jpg"
+    ];
+    var randomNumber = Math.floor(Math.random() * images.length);
+    document.body.style.backgroundImage = "url('" + images[randomNumber] + "')";
+    document.body.backgroundRepeat = 'no-repeat';
+    document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundAttachment = 'fixed';
+  }
 
-// window.addEventListener("load", changeBackground);
+window.addEventListener("load", changeBackground);
 
 let weather = {
     "apiKey" : "6cce68bf5bc6c27114d132c98ff899bb",
@@ -35,8 +38,11 @@ let weather = {
         document.querySelector(".wind").innerHTML = speed + "km/h";
         document.querySelector(".weather").classList.remove("loading");
 
-        //to generate random images of city based on user input
-        document.body.style.backgroundImage = "url('https://source.unsplash.com/1700x830/?" + name + "')"
+        // //to generate random images of city based on user input
+        // document.body.style.backgroundImage = "url('https://source.unsplash.com/1920x1080/?" + name + "')"
+        // document.body.style.backgroundRepeat = 'no-repeat';
+        // document.body.style.backgroundSize = 'cover';
+        // document.body.style.backgroundAttachment = 'fixed';
         
       },
     search: function(){
